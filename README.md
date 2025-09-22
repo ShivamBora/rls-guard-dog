@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+teacher id - borashivam@gmail.com   pswd- 12345678
+student id - signsetudemo@gmail.com  pswd-12345678
+headmaster id - luffy@gmail.com  pswd- 12345678
 
-## Getting Started
 
-First, run the development server:
+you can create new id and get roles but cannot link subjects to yourself right now . so please use these ids and if you want to check the sign in method please go ahead 
+.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////
+ RLS Guard Dog 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  This is a supabase and next.js website where we are hamdling data of users with three roles 
+  TEACHER
+  STUDENT
+  HEAD TEACHER
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  All of them are linked together to a School id and each profile has its own uuid .
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  The students can see their progress in each subject the teachers can see the progress oof students of their own subject  and the Head Teacher can see progress of evry student in its school . 
+  Right now there is no way of entering data in the websit but it can create users with different roles . 
+  To make it secure the teacher and headTeacher roles are only assigned when the user enters a speacial passcode for it 
+  teacher -0011
+  headteacher-0022
 
-## Learn More
+  But right now you can see the passcodes while siging in it is only for the show purpose .
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  The ui is very basic doing its job for just displaying information.
+  
