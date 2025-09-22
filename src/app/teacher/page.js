@@ -1,6 +1,8 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import SignOutButton from '../components/SignOutButton'; 
+
 
 export default async function TeacherPage() {
   const supabase = createServerComponentClient({ cookies });
