@@ -3,7 +3,7 @@
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import Link from 'next/link';
+ 
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -65,10 +65,12 @@ export default function LoginPage() {
           </button>
         </form>
         
-        {/* --- THIS LINE IS THE FIX --- */}
+        {/* --- THIS IS THE FIX --- */}
         <p style={{ textAlign: 'center', marginTop: '20px' }}>
           Don&apos;t have an account?{' '}
-          <Link href="/signup" style={{ color: 'blue' }}>Sign Up</Link>
+          <a href="/signup" style={{ color: 'blue', textDecoration: 'underline' }}>
+            Sign Up
+          </a>
         </p>
       </div>
       
