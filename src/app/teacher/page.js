@@ -1,8 +1,7 @@
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import SignOutButton from '../components/SignOutButton'; 
-
+import SignOutButton from '../components/SignOutButton';
 
 export default async function TeacherPage() {
   const supabase = createServerComponentClient({ cookies });
@@ -12,14 +11,12 @@ export default async function TeacherPage() {
     redirect('/login');
   }
 
-  // Current user
   const { data: profile } = await supabase
     .from('profiles')
     .select('full_name, role')
     .eq('id', session.user.id)
     .single();
 
-  // Progress (joins rely on DB relationships)
   const { data: progressData } = await supabase
     .from('progress')
     .select('*, profiles(full_name), classrooms(name)');
@@ -28,9 +25,12 @@ export default async function TeacherPage() {
 
   return (
     <div style={{ maxWidth: '800px', margin: '50px auto', padding: '20px', fontFamily: 'sans-serif' }}>
-      <header style={{ marginBottom: '30px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-        <h1 style={{ fontSize: '24px' }}>{roleTitle} Dashboard</h1>
-        <p style={{ color: '#555' }}>Welcome, {profile?.full_name || 'User'}</p>
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+        <div>
+          <h1 style={{ fontSize: '24px', margin: 0 }}>{roleTitle} Dashboard</h1>
+          <p style={{ color: '#555', margin: '5px 0 0 0' }}>Welcome, {profile?.full_name || 'User'}</p>
+        </div>
+        <SignOutButton />
       </header>
       
       <main>
