@@ -64,13 +64,14 @@ export default function LoginPage() {
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
         </form>
+        
+        {/* --- THIS LINE IS THE FIX --- */}
         <p style={{ textAlign: 'center', marginTop: '20px' }}>
-          Don't have an account?{' '}
+          Don&apos;t have an account?{' '}
           <Link href="/signup" style={{ color: 'blue' }}>Sign Up</Link>
         </p>
       </div>
       
-      {/* --- ADDED THIS SPECIAL BOX --- */}
       <div style={{ 
           marginTop: '25px', 
           padding: '15px', 
